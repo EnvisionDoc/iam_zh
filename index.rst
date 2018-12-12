@@ -3,6 +3,7 @@
 
 .. toctree::
    :maxdepth: 1
+   :hidden: 
    :caption: Back to
 
    EnOS™ 智能物联网操作系统 <https://docs.envisioniot.com/docs/enos/zh_CN/latest/overview/enos_introduction.html>
@@ -13,7 +14,6 @@
 
     iam_overview
     iam_concepts
-    scenarios
 
 .. toctree::
    :maxdepth: 1
@@ -30,6 +30,11 @@
     managing_groups
     managing_policies
 
+.. toctree::
+   :maxdepth: 1
+   :caption: 最佳实践
+
+   best_practice
 
 .. toctree::
    :maxdepth: 1
