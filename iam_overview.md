@@ -1,60 +1,60 @@
-# IAM overview
+# IAM概述
 
-EnOS Identity and Access Management (IAM) helps you manage user identities and control access to your resources in EnOS. 通过IAM，你可以创建、管理用户账户，验证账户身份（登陆），并可以控制这些账户对EnOS内资源的操作权限。当组织内存在多用户协同操作资源时，可以按需为用户分配最小权限，降低企业的信息安全风险。
+EnOS身份和访问管理（IAM）可帮助您管理用户身份并控制对EnOS中资源的访问。IAM允许你管理用户帐户生命周期，验证用户身份以及控制EnOS中资源的访问权限。当组织单位中存在多个用户时，赋予用户最少权限原则可降低企业信息安全风险。
 
-EnOS applies the identity and access management (IAM) scheme to achieve multi-tenancy. In EnOS, each tenant is managed as an organizational unit.  Data that belongs to different organizations are securely segregated and can only be accessed by users that are registered to the organization.
+EnOS Cloud通过IAM实现多租户方案。在EnOS中，每个租户都作为一个组织单位进行管理。属于不同组织的数据被安全的隔离，只有在该组织中注册的用户有权访问。
 
-IAM also ensures that a user can access only resources that the user is authorized to access. This is achieved through properly group users and assigning propper access permissions.
+IAM确保用户只访问已被授权的资源，可通过用户分组及赋予适当的访问权限来实现。
 
-The built-in IAM schemes of EnOS provide capabilities of identity management, authentication, and authorization.
+EnOS内置的IAM方案提供身份管理，身份认证和授权功能。
 
-## Identity management
+## 身份管理<identity>
 
-With IAM, a hierarchy structure is introduced to represent the relationship that exists within an organization. Each tenant is identified as an organizational unit (OU).
+IAM引入层级结构来表示组织内身份的关系。每个租户都被标识为组织单位（OU）。
 
-EnOS offer the following types of identities:
-- *User accounts* are usually created for EnOS Console users and operation staff.
-- *Service accounts* (a.k.a. Application tokens) are assigned to applications, for accessing the EnOS service APIs.
-- *Device identities* are assigned to all devices (including edge devices) that connect to the EnOS Cloud.
+EnOS的身份分为以下类型：
+ -  _用户账号_ 为使用和操作EnOS控制台的用户所创建的帐户。
+ -  _服务帐户_（a.k.a.应用程序令牌）分配给应用程序，用于访问EnOS的服务API。
+ -  _设备标识_ 分配给连接到EnOS Cloud的所有设备（包括Edge设备）。
 
-All identities are created under OUs. Among the types of user identities, EnOS provides several types of user accounts, for more information, see [IAM Concepts](iam_concepts).
+所有身份都是在组织下创建的。在各种用户身份类型中，EnOS根据自身情况设定了的几种用户账号类型。具体情况，参考[IAM概念](iam_concepts)。
 
-## Authentication
+## 身份认证<authentication>
 
-IAM provides different authentication methods for different account types.
+IAM为不同的身份类型提供了不同的身份验证方法。
 
-- User accounts are authenticated through valid credentials (username and password). Strong password with required complexity is enforced by security policy managed by OU administrators. Multi-factor authentication is available as a configurable security option.
+ - _用户帐户_ 通过有效凭据（用户名和密码）进行身份验证。具有复杂性的强密码安全策略被强制执行。并提供多因子认证作为可选的安全选项。
 
-- Service accounts use access keys (i.e. digital signatures) to be authenticated by EnOS. For more information, see [Application management overview]().
+ - _服务帐户_ 通过EnOS验证的访问密钥（即数字签名）进行认证。更多信息，参考[应用开发概述](https://docs.envisioniot.com/docs/app-development/zh_CN/latest/app_dev_overview.html)。
 
-- Devices and edges use X.509 certifications to establish the secure data communication tunnels with EnOS Cloud. For more information, see [Securing communication with EnOS IoT Hub](https://docs.envisioniot.com/docs/enos/en/latest/security/x509_ca/secure_communication_iothub.html).<!--Devices with TPM chips will be authenticated with its encrypted certifications stored in the hardware.-->
+ - _设备标识_ 设备和edge使用X.509认证与EnOS Cloud建立安全的数据通信隧道。更多信息，参考[使用X.509证书最佳实践](https://docs.envisioniot.com/docs/enos/zh_CN/latest/security/x509_ca/secure_communication_iothub.html)。
 
-## Authorization
+## 授权<authorization>
 
-EnOS adopts Role-Based-Access-Control (RBAC) that is a policy neutral access control mechanism defined around roles and privileges. Access control rule is defined as a 3-tuples in the form of role-permission-resource. The resource includes the following:
+EnOS采用了基于角色的访问控制（RBAC），这是一种中立的访问控制机制，主要围绕角色和权限授权策略。访问控制规则以三要素角色-权限-资源的形式定义。该资源包括以下内容：
+- 应用：角色可以访问的应用
+- 用户界面：角色可以看到的菜单项或按钮
+- API：角色可以调用的API
+- 数据：角色可以读写的数据
+- 报告：角色可以查看的报告
+- 事件：角色可以查看或处理的应用中的事件
 
-- Applications: applications that a role has access to
-- User Interface: menu items or buttons that a role can see
-- API: APIs that a role can invoke<!--EnOS 1.1是否支持-->
-- Data: data that a role can read or write<!--EnOS 1.1是否支持-->
-- Reports: reports that a role can read<!--EnOS 1.1是否支持-->
-- Events: events from an application that a role can view or handle<!--EnOS 1.1是否支持-->
 
-IAM allows OU administrator to define access control rules to grant privileges/ permissions of resources to other accounts through the EnOS Console GUI or through the APIs.
+IAM允许组织管理员定义访问控制规则，通过EnOS控制台或API将资源的权限授予其他帐户。
 
-Accounts with proper privileges granted may access the corresponding resources via EnOS service APIs or EnOS Console. Access control validation is performed by IAM service for each access attempt.
+被授予适当权限的帐户可以通过EnOS服务API或EnOS控制台访问相应的资源。IAM服务会对每次访问尝试都执行访问控制验证。
 
-## Major functions
+## 主要功能<keyfunctionality>
 
-The identify management on EnOS involves the following dimensions:
+EnOS的身份管理涉及以下方面：
 
-  - Lifecycle management
+- 生命周期管理
 
-  - The OU administrator can create, edit, and delete accounts that are created natively within the OU
-  - The OU administrator can add and remove external users from the current OU
-  - The OU administrator can add and remove users that are imported through LDAP federation, and can remove all LDAP accounts by deleting the LDAP connection
+  - 组织管理员可以创建，编辑和删除本组织中创建的帐户。
+  - 组织管理员可以从在本组织中添加和删除外部用户。
+  - 组织管理员可以添加和删除通过LDAP导入的用户，并可以通过删除LDAP连接删除所有LDAP帐户。
 
-- Authorization
+- 授权
 
-1. The internal, external, and LDAP users can be assigned access rights through being added into proper user groups.
-2. The internal, external, and LDAP users can also be assigned individual access rights.
+  - 通过将内部，外部和LDAP用户添加到适当的用户组，可以为其分配访问权限。
+  - 可以为内部，外部和LDAP用户分配单独的访问权限。

@@ -3,10 +3,10 @@
 
 .. toctree::
    :maxdepth: 1
-   :hidden: 
+   :hidden:
    :caption: Back to
 
-   EnOS™ 智能物联网操作系统 <https://docs.envisioniot.com/docs/enos/zh_CN/latest/overview/enos_introduction.html>
+   EnO 智能物联网操作系统 <https://docs.envisioniot.com/docs/enos/zh_CN/latest/overview/enos_introduction.html>
 
 .. toctree::
     :maxdepth: 1
@@ -22,13 +22,14 @@
    iam_gettingstarted_adduser
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 操作
+   :maxdepth: 1
+   :caption: 操作
 
-    managing_organization
-    managing_users
-    managing_groups
-    managing_policies
+   application_authorization
+   managing_policies
+   managing_users
+   managing_groups
+   enabling_multi_factor_auth
 
 .. toctree::
    :maxdepth: 1
@@ -46,23 +47,22 @@
    ldap/synchronizing_ldap
    ldap/ldap_faq
 
+
 .. toctree::
    :maxdepth: 1
    :caption: 操作审计
 
-   audit/audit_overview.md
-   audit/audit_gettingstarted.md
-   audit/event_reference.md
-   audit/log_event_overview.md
+   audit/audit_overview
+   audit/audit_gettingstarted
+   audit/log_details
 
 .. toctree::
    :maxdepth: 1
-   :caption: 后台管理
+   :caption: 系统管理
 
-   backend_admin/backend_admin.md
-   backend_admin/backend_gettingstarted.md
-   backend_admin/managing_navigationbar.md
-   backend_admin/managing_organization.md
+   system/system_overview
+   system/managing_navigationbar
+   system/managing_organization
 
 Downloads
 """"""""

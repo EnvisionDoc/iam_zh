@@ -1,82 +1,86 @@
-# Getting started with creating a new ordinary user account
->>>>>>> 63d5e28ca5e0365a7f8a05fcfb48ec5acb3e68b1
+# 在组织中创建普通用户的快速入门
 
-This topic describes how to create an individual user and grant policies.
+本文描述了如何创建普通用户并授权。
 
-## Prerequisites
+## 开始前准备<beforestart>
 
-You must have OU admin access rights.
+你必须拥有组织管理员访问权限。
 
-**Note**: When a user have multiple accounts, among which one is the admin account. We recommend that the user perform identity and access management operations through the admin account.
+**注意**：当你拥有多个帐户而其中一个是组织管理员帐户时。我们建议你通过组织管理员帐户执行身份和访问管理操作。
 
-## About this task
+## 步骤<procedure>
 
-The following major steps are involved:
+主要步骤如下：
 
-1. Define user roles and design proper access policies for different roles. For example, you might consider to define the the **IoT Engineer** role, who is typically responsible for the following operations:
-   - Connect devices into EnOS Cloud, including cloud-end configuration such as creating products, provisioning devices, and testing communication.
-   - On-site installation of edge devices and connect cables from devices to the edge gateway.
+1. 定义用户角色并根据角色定义适合的策略。
 
-  To perform the operations, this role would need access to the following resources:
-  - **Device Connection** related configuration
-  - **Edge Gateway** configuration
+    例如：假设你需要定义**物联网实施人员**角色，该角色通常负责以下操作：
 
-2. For each specific user role, create a user group to manage access permissions collectively for this role.
+    - 将设备连接到EnOS Cloud，包括云端配置，如创建产品，配置设备和测试通信。
+    - 现场安装edge设备并铺设edge到接入设备的通讯线缆。
 
-3. Create a user account, and add the account into the user group corresponding to the role.
+    为了能执行这些操作，该角色需要拥有以下服务的权限：
 
-4. Optionally, assign additional access policies for the user when needed.
+    - 设备Edge接入
+    - 设备管理
 
-This example makes the following assumptions:
-- The organization that the user belongs already exist.
-- The role of the user, however, does not have corresponding user group created on EnOS.
-- The user will be created within its organization.
+2. 为每个特定的用户角色，创建一个用户组用以集中管理该角色的访问权限。
+3. 创建用户账号，并把用户账号添加到角色对应的用户组中。
+4. 可选步骤，如果有需要，可为该用户单独添加额外权限。
 
-## Step 1: Create a policy
+本例基于如下下假设：
+ - 用户所属的组织已存在。
+ - EnOS上未创建该用户对应的角色的用户组。
+ - 该用户在本组织中创建。
 
-1. In the EnOS console, click **IAM > Policies** from the left navigation panel.  
-2. Click **New Policy**,
-3. Enter the policy name and click **Next**.
-4. In the **Grant Permission** page, you can grant access to services or assets.(对照azure文件看下)
-     - Service: the services that the user is allowed to access. After configurating, user only can see and access to the service that grant access.
-     - Assets: the assets that the user is allowed to access. EnOS supports granting access at 3 levels: individual asset level, asset tree level, and all assets. When assigned access to all assets, the user has access to the data of all assets.<!--资产树是否交付-->
-5. Click **Save** to create the policy.
+## 步骤1：创建策略<createpolicy>
 
-## Step 2: Create a group
+1. 在EnOS控制台中选择**IAM>策略管理**。
+2. 点击**新建策略**。
+3. 输入策略名并点击**下一步**。
+4. 在**配置权限**页面中，为该策略添加相应的服务权限。在配置完成后，被授予该策略的用户只能看到和使用被授权的服务。
+5. 点击**保存**来完成策略创建。
 
-In this step, you'll create a user group for the role, and associates the policy that you created in Step 1, which defines the permissions for the user role.
+## 步骤2：创建用户组<createusergroup>
 
-1. In the EnOS console, click **IAM > Groups** from the left navigation panel.  
-2. In the **Groups** page, click **New Group**.
-3. Enter a group name that represents the role that you defined and click **Next**.
-4. Click **Assign Policies** to assign policies for this group.
-5. Click **Save**.
+在此步骤中，你将为该角色创建用户组，并与你在步骤1中创建的策略进行关联，该策略定义了此类用户角色的权限。
+
+1. 在EnOS控制台中选择**IAM>用户组管理**。
+2. 在**用户组**页面，点击**新建用户组**。
+3. 输入一个能代表该角色的用户名然后点击**下一步**。
+4. 点击**添加权限策略**关联策略。
+5. 点击**保存**完成创建。
+
+更多信息, 参考[创建和管理用户组](managing_groups).
+
+## 步骤3：创建用户并把该用户添加到用户组中<createuser>
+
+在此步骤中，你将在本组织中创建用户，并把用户添加到步骤2中创建的用户组。该用户将继承与用户组关联的策略中定义的所有权限。
+
+1. 在EnOS控制台中选择**IAM>用户管理**。
+2. 在**内部用户**页面，点击**新建用户**并提供适当的配置，在这些配置中：
+   - **密码发送**
+      + 其他安全方式：表示以其他安全的离线方式发送密码。
+      + 通过电话发送：表示发送密码到注册的手机。
+      + 通过电子邮件发送：表示发送密码到注册的电子邮件中。
+   - **密码**：你可以设置初始密码，也可以让系统自动生成帐户密码。
+3. 在**加入用户组**标签中，点击**加入用户组**。
+4. 在弹出窗口中，选择用户所属的用户组，然后点击**保存**。
+5. 点击**保存**完成用户创建。
 
 
-## Step 3: Create a user and add user into group
-
-In this step, you'll create the user in the organization, and add the user into the user group that you created in Step 2. This user will then inherit all permissions that are defined by the policies associated to the user group.
-
-1. In the EnOS console, click **IAM > Users** from the left navigation panel.  
-2. In the **Internal User** tab, click **Create User** and provide proper settings, among these settings:
-   - **Send by**
-     - offline: indicates to send the account information offline.
-     - Send by phone: indicates to send the account information via messaging to the registered mobile phone number.
-     - Send by email: indicates to send the account information via sending email to the registered email address.
-   - **Password**: you can set the initial password, or you can let the system to auto-generate the password for the account.
-3. In the **Add User to Groups** tab, click **Add User Group**.
-4. In the pop-up windows, select the groups that the user belongs to and click **Save**.
-5. Click **Save** to confirm the change.
-
-
-## (Optional) Step 4: Add additional policies
+## 步骤4: （可选）添加额外策略<additionalpolicies>
 
 If the policies inherited from the user groups are not sufficient, you can add additional policies for the user.
-1. In the EnOS Console, click **IAM > Users** from the left navigation panel.  
-2. Click the authorize icon ![authorize](media/authorize.png) to open .
-3. In the **Polices** tab, click **Assign Policy** .
-4. In the pop-up window, select the policies to assign to this user and click **Save**.
-5. Click **Save** to confirm the change.
 
-## What to do next
-The user will receive account creation notification through the channel as specified in Step 3. The user can then log into EnOS Console with the account information and verify access rights.
+如果从用户组中继承的策略未能满足该用户的操作，则可以为该用户添加其他策略。
+
+1. 在EnOS控制台中选择**IAM>用户管理**。
+2. 点击需要添加策略的用户后的![authorize](media/authorize.png)。
+3. 在**策略**页面中，点击**配置权限**。
+4. 在弹出窗口中，选择该用户需要的策略，然后点击**保存**。
+5. 点击**保存**完成添加。
+
+## 接着下一步<nextstep>
+
+用户将通过步骤3中指定的方式接收到帐户创建成功的通知。然后，用户可以使用该帐户信息登录EnOS控制台并拥有相应的权限。

@@ -1,26 +1,24 @@
-# Managing policy
+# 创建和管理策略
 
-This article instructs how to manage access policies.
+本文指导如何管理定义特定资源的访问权限的策略。
 
-## Creating a policy
+## 创建策略<creation>
 
-You can create a policy to:
+您可以使用以下方法创建策略：
 
-- Grant permission to specified services
-- Grant full permission to all services including newly added service.
+- 授予某些服务的权限
+- 授予包括新添加服务在内的所有服务的完全权限。
 
-To create a policy, do the following steps：
+1. 在EnOS控制台中选择**IAM>策略管理**。
+2. 点击**新建权限策略**。
+3. 在**基本信息**页面中，填入该策略的基本信息，点击**下一步**。
+4. 在**配置权限**页面中，你可以点选服务的复选框来授权。
+5. 点击**保存**完成创建。
 
-1. In the navigation panel, click **IAM > Policy**.
-2. Click **New Policy**.
-3. In the **Basic Information** page, enter the basic information of the policy. Then click **Next**.
-4. In the **Grant Permissions** page, assign permissions to the services.
-5. Click **Save** to complete creating the policy.
+## 删除策略<deletion>
 
-## Deleting a policy
+删除策略时，EnOS会撤消已授予此策略的用户和用户组的相应权限。
 
- When you delete a policy, users or user groups who have been granted this policy, will automatically be revoked the relevant permissions.
-
-1. In the navigation panel, click **IAM > Policy**.
-2. Locate the policy to delete and click ![image](media/delete_icon.png).
-3. In the pop-up window, click **Confirm** to delete this policy.
+1. 在EnOS控制台中选择**IAM>策略管理**。
+2. 点击需要删除的策略后的![image](media/delete_icon.png)。
+3. 在弹出窗口中，点击**确认**完成删除。

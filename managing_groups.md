@@ -1,23 +1,30 @@
-# Managing user groups
+# 创建和管理用户组
 
-As an administrator, you can add a user to a user group so that the user inherits all permissions of the group.
+本文指导如何创建和管理用户组。然后，您可以将用户添加到用户组，被添加的用户会继承该组的所有权限。
 
+## 目标读者<audience>
 
-## Creating a user group
-This topic instructs how to create a new user in EnoS IAM.
+组织管理员
 
-1. In the navigation panel, click **IAM > User Group**.
-2. Click **New Group**.
-3. In **Basic Information** page, fill the basic information. Click **Next**.
-4. In **Add Users** page, click **Assign Users to Group**.
-5. In the pop-up window, select the users to be assigned to this group. Then Click **Save**.
-6. In **Assign Policies** page, click **Assign Policies**.
-7. In the pop-up window, select the policies to be assigned to this group. Then click **Save**
-8. Click **Save** to create the User group.
+## 创建用户组<creation>
+
+本文指导了你如何在EnoS IAM中创建新用户。
 
 
-## Deleting a user group
-When deleting a user group, the users belong to this user group will automatically revoke the appropriate permissions.
-1. In the navigation panel, click **IAM>User Group**.
-2. Click ![image](media/delete_icon.png) of the user group to be deleted.
-3. In the pop-up window, click **Confirm** to delete the user group.
+1. 在EnOS控制台中选择**IAM>用户组**。
+2. 点击**新建用户组**。
+3. 填入用户组名，点击**下一步**。
+4. 在**关联用户**页面中，点击**添加用户**。
+5. 在弹出窗口中，点选需被加入用户组中的用户，然后点击**保存**。
+6. 在**配置权限**页面中，点击**添加权限策略**。
+7. 在弹出窗口中，点选改用户组所需的策略，然后点击**保存**完成授权。
+8. 点击**保存**完成创建用户组。
+
+
+## 删除用户组<deletion>
+
+删除用户组时，属于该用户组的用户将自动被撤消相应的权限。
+
+1. 在EnOS控制台中, 点击**IAM>用户组**.
+2. 点击需删除用户组后的![image](media/delete_icon.png)。
+3. 在弹出窗口中，点击**确定**完成删除。

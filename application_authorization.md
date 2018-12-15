@@ -1,15 +1,17 @@
-# Application authorization
+# 申请授权
 
-It is to authorize the applications to access assets data which are created or purchased of the organization.
+本章节描述了如何授权为应用程序访问组织创建或购买的资产数据。
 
-## Asset authorization
 
-1. Click **Asset authorization**, then tick the asset tree node on the left, or directly select a site in the asset list on the right.
+## 授权申请<authorization>
 
-2. Click **Authorize** and the application can access data for all selected sites.
+1. 单击EnOS控制台左侧导航面板中的**IAM>申请授权**。
 
-## Note
+2. 单击要授予权限的应用程序后的![](media/edit.png)。
 
-1. The asset tree on the left include the root node and all child nodes. Tick the check box before a child node, and all sites subordinate to the node will be selected.
-2. The right side shows the information of all sites under the currently selected node and the path of the site location.
-3. Once the “All Assets” option is checked, any new site accessed will be authorized for the current application by default.
+3. 在**资产授权**页面中。
+
+   - 左侧的资产树包括根节点和所有子节点。勾选子节点前的复选框，将选择从属于该节点的所有站点。
+   - 右侧显示当前所选节点下所有站点的信息以及站点位置的路径。
+
+**注意**：选中“所有资产”选项后，默认情况下，将为当前应用程序授权访问的任何新站点。

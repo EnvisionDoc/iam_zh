@@ -1,86 +1,73 @@
-# Managing users
-This topic instructs how to manage and authorize user in EnoS IAM.
+# 创建和管理用户
 
-## Creating and authorizing an internal user
-This topic instructs how to create and authorize an internal user in EnoS IAM.
+本文指导如何管理普通用户：包括组织中的内部用户，来自其他组织的外部用户以及LDAP用户。
 
-### Step 1: Creating an internal user
-1. In the navigation panel, click **IAM>User**.
-2. In **Internal User** tab, Click **New User**.
-3. In **Basic Information** step, fill in the basic information of the new user and click **Next**.
-   - **Send By**: You can choose to send the password to the owner of the user account via phone or email. You also can sent the password in other safety way, such as,  .
+## 创建和授权一个内部用户<createinternal>
 
-### Step 2: Grant permission
-You can assign permission for a user in the following approaches:
-- Granting policies
-- Assigning user to user groups. In this approach, the user will inherit all permissions that are assigned to the user groups.
+您可以使用以下步骤创建属于本组织的内部用户。
 
-To grant policies:
-  1. In **Policies** tab, click **Grant Permissions**.
-  2. In the pop-up window, select policies to be assigned to this user and click **Save**.
-  3. Click **Save** to create the user.
+### 步骤一: 创建内部用户<creationinternal>
 
-To assign user to groups:
- 1. In **Assign User to Group** tab, click **Assign to User Group**.
- 2. In the pop-up window, select User group to be assigned to this user and click **Save**.
- 2. Click **Save** to create the user.
-
-<!--可能会被移到gettingstarted里-->
+1. 在EnOS控制台中选择**IAM>用户管理**。
+2. 在**内部用户**标签中，点击**新建用户**。
+3. 在**基本信息**中，填入新用户的基本信息，然后点击**下一步**。
+   - **密码发送**：你可以选择通过电话或电子邮件将密码发送给用户帐户的所有者。你还可以使用其他安全的方法发送密码。
 
 
-## Adding and authorizing an external user
-This topic instructs how to add and authorize an external user in EnoS IAM.
+### 步骤二: 授予权限<authorizationinternal>
 
-### Step 1: Import an external user
-1. In the navigation panel, click **IAM>User**.
-2. In **External User** tab, Click **Import User**.
-3. In the pop-up windows, enter the full username of the external user. If the name is correct, the detailed information will display in the dialog. Then click **Confirm**.
-4. Click **Next**.
+您可以通过以下方法为用户分配权限：
+ - 授予权限
+ - 将用户分配给用户组。在此方法中，用户将继承分配给用户组的所有权限。
 
-### Step 2: Grant permission
-You can assign permission for a user in the following approaches:
-- Granting policies
-- Assigning user to user groups. In this approach, the user will inherit all permissions that are assigned to the user groups.
+授予权限的步骤如下：
+ 1. 在**策略**标签中，点击**配置权限**。
+ 2. 在弹出窗口中，选择授予该用户的权限，然后点击**保存**。
+ 3. 点击**保存**完成用户创建。
 
-To grant policies:
-  1. In **Policies** tab, click **Grant Permissions**.
-  2. In the pop-up window, select policies to be assigned to this user and click **Save**.
-  3. Click **Save** to import the user.
-
-To assign user to groups:
- 1. In **Assign User to Group** tab, click **Assign to User Group**.
- 2. In the pop-up window, select User group to be assigned to this user and click **Save**.
- 2. Click **Save** to import the user.
+将用户分配给用户组的步骤如下：
+ 1. 在**加入用户组**标签中，点击**加入用户组**。
+ 2. 在弹出窗口中，选择该用户会被添加入的用户组，然后点击**保存**。
+ 3. 点击**保存**完成用户创建。
 
 
+## 导入和授权一个外部用户<importexternal>
+
+您可以使用以下步骤添加来自其他组织的外部用户。
+
+### 步骤一: 导入外部用户<importexternal>
+
+1. 在EnOS控制台中选择**IAM>用户管理**。
+2. 在**外部用户**标签中，点击**导入用户**。
+3. 在弹出窗口中，填入外部用户的完整名称。如果用户名正确，那该用户的详细信息会显示在对话框中。然后点击**确认**。
+4. 点击**下一步**。
+
+### 步骤二: 授予权限<authorizationexternal>
+
+授权外部用户的步骤与内部用户相同。
 
 
+## 添加和授权一个LDAP用户<addldap>
 
-## Deleting an internal user
-Delete an internal user means that this user account is completely deleted from the EnOS Cloud.
+### 步骤一: 添加LDAP用户<addlap>
 
-1. In the navigation panel, click **IAM>User**.
-2. In **Internal User** tab, click ![Image](media/delete_icon.png) after the user to be deleted.
-3. In the pop-up window, click **Confirm** to delete this user account complete.
+要添加LDAP用户，首先需要配置与LDAP服务器的连接。更多信息，参考[LDAP联合快速入门](ldap/lap_gettingstarted)。
 
-## Remove an external user
-Remove an external user means that this user is removed from the current organization.  
+### 步骤二: 授予权限<authorizationldap>
 
-1. In the navigation panel, click **IAM>User**.
-2. In **External User** tab, click ![Image](media/delete_icon.png) after the user to be deleted.
-3. In the pop-up window, click **Confirm** to remove this user.
+授权LDAP用户的步骤与内部用户相同。
 
+## 移除外部用户<removeexternal>
 
-## Resetting password
+此操作仅从当前组织中删除此用户，该用户仍存在于其根组织和导入该用户的其他组织中。
 
-1. In the navigation panel, click **IAM>User**.
-2. In **Internal User** tab, click ![Image](media/edit_icon.png) after the user to be reset password.
-3. In **Edit User Information** page, click **Reset** next to the password. System will generate a new password which shows next to the  **Reset**.
-4. Remember this password and click **Save** to reset the password.
+1. 在EnOS控制台中选择**IAM>用户管理**。
+2. 在**外部用户**标签中，点击被删除用户后的![Image](media/delete_icon.png)。
+3. 在弹出窗口中，点击**确定**来完成删除。
 
+## 重置密码<resetpassword>
 
-## Enabling/Disabling user account
-
-1. In the navigation panel, click **IAM>User**.
-2. In **Internal User** tab, click ![Image](media/edit_icon.png) after the user to be enabled/disabled password.
-3. click **Save** to enable/disable the user account.
+1. 在EnOS控制台中选择**IAM>用户管理**。
+2. 在**内部用户**标签中，点击需该修改密码的用户后的![Image](media/edit_icon.png)。
+3. 在**编辑用户信息**界面中，点击**重置密码**。系统会自动生成一个新密码并显示在按钮边上。
+4. 保存密码并点击右上角的**保存**完成密码重置。
