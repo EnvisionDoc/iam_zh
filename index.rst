@@ -4,16 +4,21 @@
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Back to
+   :caption: 返回
 
-   EnO 智能物联网操作系统 <https://docs.envisioniot.com/docs/enos/zh_CN/latest/overview/enos_introduction.html>
+   EnOS™ 智能物联网操作系统 <https://docs.envisioniot.com/docs/enos/zh_CN/latest/overview/enos_introduction.html>
 
 .. toctree::
-    :maxdepth: 1
-    :caption: 概念
+   :maxdepth: 1
+   :caption: 概述
 
-    iam_overview
-    iam_concepts
+   iam_overview
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 概念
+
+   iam_concepts
 
 .. toctree::
    :maxdepth: 1
@@ -25,7 +30,6 @@
    :maxdepth: 1
    :caption: 操作
 
-   application_authorization
    managing_policies
    managing_users
    managing_groups

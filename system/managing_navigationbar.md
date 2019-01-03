@@ -38,8 +38,8 @@
    -  Display in top navigation bar：如果选择是`Yes`, 则该菜单项的图标会显示在顶部的导航栏中，如下图所示：
       ![Image](../media/navigationbar.png)
    - Visible to：
-     + Authorized user：该菜单项只对被授权该服务的用户可见。Indicates that the menu item is only visible to the users that have been granted permission in IAM.
-     + Everyone: 该菜单项对所有用户可见。Indicates that the menu item is visible to all users.
+     + Authorized user：该菜单项只对被授权该服务的用户可见。
+     + Everyone: 该菜单项对所有用户可见。
      + OU admin and OU owner: 该菜单项只对组织管理员和组织所有者可见。
    - Resource ID和Parent Resource ID为EnOS自动生成。
 4. 点击**保存**完成一级菜单创建。

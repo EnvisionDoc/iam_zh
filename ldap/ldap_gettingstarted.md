@@ -26,10 +26,10 @@
       - **域**：域是LDAP连接的唯一识别码。
       - **LDAP主服务器**：LDAP服务器IP地址或者URL。
       - **端口号**：可选，LDAP服务器的端口号。
-      - **base DN**：从LDAP目录服务器导入用户时使用的根专有名称（DN）。您可以一次在一个LDAP服务器下配置多个base DN。base DN之间使用分号（;）分割。例如`cn=users,dc=example,dc=com;ou=users,dc=example,dc=com`。
+      - **base DN**：从LDAP目录服务器导入用户时使用的根专有名称（DN）。支持一次在一个LDAP服务器下配置多个base DN。base DN之间使用分号（;）分割。例如`cn=users,dc=example,dc=com;ou=users,dc=example,dc=com`。
       - **过滤条件**：Base DN的条件过滤字段。例如，`FILTER=memberOf=CN=group,CN=developers,DC=example,DC=com`。
 
-        **注意**：确保所选择的条目都为有效的账号条目。
+        **注意**：确保所选择的条目均为有效的账号条目。
       - **User DN或用户名**：LDAP服务器的管理员帐户的用户名。
       - **密码**：LDAP服务器的管理员帐户的密码。
       - **属性匹配**：系统属性与LDAP属性之间的匹配关系。
@@ -62,7 +62,7 @@
 
 您可以单独授权LDAP用户，也可以将LDAP用户添加到授权组。
 
- - 已授权的LDAP用户直接登录EnOS Cloud并可访问被授权的服务。
+ - 已授权的LDAP用户直接登录EnOS云端并可访问被授权的服务。
  - 未经授权的LDAP用户在登陆后无法访问任何服务。他们需要联系组织管理员以请求权限。
 
 授权的具体过程，参考[创建和管理用户](../managing_users)。
