@@ -4,6 +4,7 @@
 
 
 ## 日志示例<samplecode>
+
 ```
 {
   "userIdentity": {
@@ -77,93 +78,52 @@
 
 可能被返回的事件列表如下：
 
-<table>
-  <tr>
-    <th>事件</th>
-    <th>描述</th>
-  </tr>
-  <tr>
-    <td>consoleSignIn</td>
-    <td>用户从EnOS控制台登录</td>
-  </tr>
-  <tr>
-    <td>consoleSignOut</td>
-    <td>用户从EnOS控制台登出</td>
-  </tr>
-  <tr>
-    <td>signInSelectOrganization</td>
-    <td>用户登录时选择组织</td>
-  </tr>
-  <tr>
-    <td>createUser</td>
-    <td>创建用户</td>
-  </tr>
-  <tr>
-    <td>deleteUser</td>
-    <td>删除用户</td>
-  </tr>
-  <tr>
-    <td>resetUserPassword</td>
-    <td>管理员重置用户密码</td>
-  </tr>
-  <tr>
-    <td>modifyUserPassword </td>
-    <td>用户修改密码</td>
-  </tr>
-  <tr>
-    <td>retrieveUserPassword</td>
-    <td>用户找回密码</td>
-  </tr>
-  <tr>
-    <td>setUserAccountStatus</td>
-    <td>管理员设置用户账号状态，包括启用(enable)和停用(disable)</td>
-  </tr>
-  <tr>
-    <td>addExternalUser</td>
-    <td>导入外部用户</td>
-  </tr>
-  <tr>
-    <td>removeExternalUser</td>
-    <td>移除外部用户</td>
-  </tr>
-  <tr>
-    <td>createGroup</td>
-    <td>创建用户组</td>
-  </tr>
-  <tr>
-    <td>deleteGroup</td>
-    <td>删除用户组</td>
-  </tr>
-  <tr>
-    <td>addUserToGroup</td>
-    <td>添加用户至用户组</td>
-  </tr>
-  <tr>
-    <td>removeUserFromGroup</td>
-    <td>将用户从用户组移出</td>
-  </tr>
-  <tr>
-    <td>createPolicy</td>
-    <td>创建策略</td>
-  </tr>
-  <tr>
-    <td>deletePolicy</td>
-    <td>删除策略</td>
-  </tr>
-  <tr>
-    <td>appendResource</td>
-    <td>将服务添加到策略</td>
-  </tr>
-  <tr>
-    <td>revokeResource</td>
-    <td>从策略中移除服务</td>
-  </tr>
-  <tr>
-    <td>grantPolicy</td>
-    <td>将策略授权于用户或用户组</td>
-  </tr>
-  <tr>
-    <td>removePolicy</td>
-    <td>从用户或用户组中移除策略</td>
-  </tr>
-</table>
+.. list-table::
+   :header-rows: 1
+
+   * - 事件
+     - 描述
+   * - consoleSignIn
+     - 用户从EnOS控制台登录
+   * - consoleSignOut
+     - 用户从EnOS控制台登出
+   * - signInSelectOrganization
+     - 用户登录时选择组织
+   * - createUser
+     - 创建用户
+   * - deleteUser
+     - 删除用户
+   * - resetUserPassword
+     - 管理员重置用户密码
+   * - modifyUserPassword
+     - 用户修改密码
+   * - retrieveUserPassword
+     - 用户找回密码
+   * - setUserAccountStatus
+     - 管理员设置用户账号状态，包括启用(enable)和停用(disable)
+   * - addExternalUser
+     - 导入外部用户
+   * - removeExternalUser
+     - 移除外部用户
+   * - createGroup
+     - 创建用户组
+   * - deleteGroup
+     - 删除用户组
+   * - addUserToGroup
+     - 添加用户至用户组
+   * - removeUserFromGroup
+     - 将用户从用户组移出
+   * - createPolicy
+     - 创建策略
+   * - deletePolicy
+     - 删除策略
+   * - appendResource
+     - 将服务添加到策略
+   * - revokeResource
+     - 从策略中移除服务
+   * - grantPolicy
+     - 将策略授权于用户或用户组
+   * - removePolicy
+     - 从用户或用户组中移除策略
+
+<!--end-->
