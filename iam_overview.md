@@ -25,9 +25,9 @@ IAM为不同的身份类型提供了不同的身份验证方法。
 
  - _用户帐户_ 通过有效凭据（用户名和密码）进行身份验证。具有复杂性的强密码安全策略被强制执行。并提供多因子认证作为可选的安全选项。
 
- - _服务帐户_ 通过EnOS验证的访问密钥（即数字签名）进行认证。更多信息，参考[应用开发概述](https://docs.envisioniot.com/docs/app-development/zh_CN/latest/app_dev_overview.html)。
+ - _服务帐户_ 通过EnOS验证的访问密钥（即数字签名）进行认证。更多信息，参考[应用开发概述](https://www.envisioniot.com/docs/app-development/zh_CN/latest/app_dev_overview.html)。
 
- - _设备标识_ 设备和edge使用X.509认证与EnOS云端建立安全的数据通信隧道。更多信息，参考[使用X.509证书最佳实践](https://docs.envisioniot.com/docs/enos/zh_CN/latest/security/x509_ca/secure_communication_iothub.html)。
+ - _设备标识_ 设备和edge使用X.509认证与EnOS云端建立安全的数据通信隧道。更多信息，参考[使用X.509证书最佳实践](https://www.envisioniot.com/docs/enos/zh_CN/latest/security/x509_ca/secure_communication_iothub.html)。
 
 ## 授权<authorization>
 
@@ -51,11 +51,11 @@ EnOS的身份管理涉及以下方面：
 
 - 生命周期管理
 
-   - 组织管理员可以创建，编辑和删除本组织中创建的帐户。
-   - 组织管理员可以从在本组织中添加和删除外部用户。
-   - 组织管理员可以添加和删除通过LDAP导入的用户，并可以通过删除LDAP连接删除所有LDAP帐户。
+  + 组织管理员可以创建，编辑和删除本组织中创建的帐户。
+  + 组织管理员可以从在本组织中添加和删除外部用户。
+  + 组织管理员可以添加和删除通过LDAP导入的用户，并可以通过删除LDAP连接删除所有LDAP帐户。
 
 - 授权
 
-  - 通过将内部，外部和LDAP用户添加到适当的用户组，可以为其分配访问权限。
-  - 可以为内部，外部和LDAP用户分配单独的访问权限。
+  + 通过将内部，外部和LDAP用户添加到适当的用户组，可以为其分配访问权限。
+  + 可以为内部，外部和LDAP用户分配单独的访问权限。

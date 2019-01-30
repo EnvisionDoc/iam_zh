@@ -35,16 +35,20 @@
    - key(ID)：Key(ID)的格式。一级菜单为_platform-{modulename}_。最长不可超过64位。
    - Parent node：为一级菜单选择父节点，必须是服务类别。
    - Add to common tab：
+
      + 如果选择`是`, 则该菜单项将同时显示在导航栏的**常用**与**所有**标签下。
      + 如果选择`否`, 则该菜单项只会显示在导航栏的**所有**标签下。
+
    -  Display in top navigation bar：如果选择是`Yes`, 则该菜单项的图标会显示在顶部的导航栏中，如下图所示：
 
       .. image:: ../media/navigationbar.png
 
    - Visible to：
+
      + Authorized user：该菜单项只对被授权该服务的用户可见。
      + Everyone: 该菜单项对所有用户可见。
      + OU admin and OU owner: 该菜单项只对组织管理员和组织所有者可见。
+     
    - Resource ID和Parent Resource ID为EnOS自动生成。
 
 4. 点击 **保存** 完成一级菜单创建。

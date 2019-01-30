@@ -3,13 +3,6 @@
 
 .. toctree::
    :maxdepth: 1
-   :hidden:
-   :caption: 返回
-
-   EnOS™ 智能物联网操作系统 <https://docs.envisioniot.com/docs/enos/zh_CN/latest/overview/enos_introduction.html>
-
-.. toctree::
-   :maxdepth: 1
    :caption: 概述
 
    iam_overview
@@ -71,6 +64,6 @@
 Downloads
 """"""""
     pdf_ htmlzip_ epub_
-.. _pdf: https://docs.envisioniot.com/projects/iam/downloads/pdf/latest/
-.. _htmlzip: https://docs.envisioniot.com/projects/iam/downloads/htmlzip/latest/
-.. _epub: https://docs.envisioniot.com/projects/iam/downloads/epub/latest/
+.. _pdf: https://www.envisioniot.com/projects/iam/downloads/pdf/latest/
+.. _htmlzip: https://www.envisioniot.com/projects/iam/downloads/htmlzip/latest/
+.. _epub: https://www.envisioniot.com/projects/iam/downloads/epub/latest/
