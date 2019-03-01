@@ -6,7 +6,7 @@
 导入并授权LDAP用户的流程如下：
 
 .. image:: ../media/flow1.png
-   :width: 750px
+   
 
 ## 目标读者<audience>
 

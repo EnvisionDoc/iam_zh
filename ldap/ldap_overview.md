@@ -25,6 +25,6 @@ EnOS云端允许与轻量级目录访问协议（LDAP）联合创建用户。 �
 下图为LDAP用户登录的流程。
 
 .. image:: ../media/framework.png
-   :width: 750px
+   
 
 <!--end-->
