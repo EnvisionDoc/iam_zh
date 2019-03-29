@@ -89,8 +89,8 @@
 4. 记录密码并点击右上角的 **保存** 完成密码重置。
 
 
-.. |delete_icon| image:: media/delete_icon.png
+.. |delete_icon| image:: ../../media/delete_icon.png
 
-.. |edit_icon| image:: media/edit_icon.png
+.. |edit_icon| image:: ../../media/edit_icon.png
 
 <!--end-->

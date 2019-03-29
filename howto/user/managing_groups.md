@@ -36,6 +36,6 @@
 
 3. 在弹出窗口中，点击 **确定** 完成删除。
 
-.. |delete_icon| image:: media/delete_icon.png
+.. |delete_icon| image:: ../../media/delete_icon.png
 
 <!--end-->
