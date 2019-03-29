@@ -11,7 +11,9 @@
    :maxdepth: 1
    :caption: 概念
 
-   iam_concepts
+   user_usergroup
+   access_policy
+  
 
 .. toctree::
    :maxdepth: 1
@@ -22,11 +24,11 @@
 .. toctree::
    :maxdepth: 1
    :caption: 操作
+  
+   howto/managing_org_info_account
+   howto/user/index.rst
+   howto/service_account/index.rst
 
-   managing_policies
-   managing_users
-   managing_groups
-   enabling_multi_factor_auth
 
 .. toctree::
    :maxdepth: 1
@@ -60,10 +62,3 @@
    system/system_overview
    system/managing_navigationbar
    system/managing_organization
-
-Downloads
-""""""""
-    pdf_ htmlzip_ epub_
-.. _pdf: https://www.envisioniot.com/projects/iam/downloads/pdf/latest/
-.. _htmlzip: https://www.envisioniot.com/projects/iam/downloads/htmlzip/latest/
-.. _epub: https://www.envisioniot.com/projects/iam/downloads/epub/latest/
