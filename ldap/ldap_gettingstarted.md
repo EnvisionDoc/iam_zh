@@ -18,7 +18,7 @@
 
 2. 你必须知道LDAP服务器的管理员帐户的用户名和密码。此管理员帐户应具有对所有base DN的完全的访问权限。
 
-3. 在IAM中已创建LDAP用户的访问策略。详细信息，参考[创建和管理策略](../managing_policies)。
+3. 在IAM中已创建LDAP用户的访问策略。详细信息，参考[创建和管理策略](../howto/user/managing_policies)。
 
 ## 步骤1：建立与LDAP服务器的连接<connectLDAP>
 
@@ -66,7 +66,7 @@
 - 已授权的LDAP用户直接登录EnOS云端并可访问被授权的服务。
 - 未经授权的LDAP用户在登陆后无法访问任何服务。他们需要联系组织管理员以请求权限。
 
-授权的具体过程，参考[创建和管理用户](../managing_users)。
+授权的具体过程，参考[创建和管理用户](../howto/user/managing_users)。
 
 ## 结果
 
