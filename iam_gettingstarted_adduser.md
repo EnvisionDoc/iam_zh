@@ -59,7 +59,7 @@
 
 5. 点击 **保存** 完成创建。
 
-更多信息, 参考[创建和管理用户组](managing_groups).
+更多信息, 参考[创建和管理用户组](howto/user/managing_groups).
 
 ## 步骤3：创建用户并把该用户添加到用户组中<createuser>
 
