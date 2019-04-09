@@ -56,6 +56,6 @@
 
 .. |edit| image:: ../media/edit.png
 
-.. |authorize| image:: media/authorize.png
+.. |authorize| image:: ../media/authorize.png
 
 <!--end-->
