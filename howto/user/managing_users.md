@@ -62,7 +62,7 @@
 
 ### 步骤一: 添加LDAP用户<addlap>
 
-要添加LDAP用户，首先需要配置与LDAP服务器的连接。更多信息，参考[LDAP联合快速入门](ldap/ldap_gettingstarted)。
+要添加LDAP用户，首先需要配置与LDAP服务器的连接。更多信息，参考[LDAP联合快速入门](../../ldap/ldap_gettingstarted)。
 
 ### 步骤二: 授予权限<authorizationldap>
 
