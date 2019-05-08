@@ -26,6 +26,7 @@
    :caption: 操作
   
    howto/managing_org_info_account
+   howto/managing_policies
    howto/user/index.rst
    howto/service_account/index.rst
 

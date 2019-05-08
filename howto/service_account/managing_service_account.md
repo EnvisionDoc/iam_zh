@@ -10,20 +10,34 @@
 
 - 拥有当前OU的管理员用户权限。
 
-- 已在当前OU注册一个应用程序或购买一个其他OU的应用程序，参考[管理应用](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)。
+- 已在当前OU注册一个应用程序或购买一个其他OU的应用程序，参考[管理应用](/docs/app-development/zh_CN/latest/managing_apps)。
+
+- 如果要授予应用自定义的权限，需要事先创建好策略。参见[创建和管理策略](../managing_policies)
 
 ## 操作步骤
 
-1. 选择 **访问控制 > 服务账号**；
+1. 选择 **身份与授权 > 服务账号**；
 
 2. 在服务账号列表中选择需要授权的应用，点击 **授权** 按钮，进入授权页面；
+   
+   .. image:: ../../media/iam_service_account_authorize.png
+
    如果应用尚未注册，可以点击 **应用注册**，然后再返回服务账号页面继续授权操作。
 
 3. 点击 **添加权限策略** 按钮，在弹窗中选择需要为该服务账号添加的策略，点击 **+**，为将所选权限授予应用，点击**保存**；
+   
+  .. image:: ../../media/iam_service_account_assign_policies.png
+
    可选择的权限列表默认显示预定义的权限，用户自定义的权限也会被添加到可选择的权限列表中；
 
 4. 在授权页面点击 **保存** 按钮，完成授权操作。
+   
+   .. image:: ../../media/iam_service_account_assign_policies_confirm.png
 
 ## 结果
 
 在服务账号页面，点击**授权**，进入权限策略列表，可以查看当前应用是否被授权成功，成功授予的权限会显示在权限列表中。
+
+.. image:: ../../media/iam_service_account_policies.png
+
+<!--end-->
