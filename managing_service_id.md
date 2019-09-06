@@ -1,10 +1,10 @@
 ## 概述
-服务账号是一种特殊的EnOS账号，属于应用程序，用于通过API访问EnOS上的资源。服务账号的本体是应用程序，其新建、修改和删除等操作在[应用注册](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)模块中进行，本文将描述如何给服务账号授权。
+服务账号是一种特殊的EnOS账号，属于应用程序，用于通过API访问EnOS上的资源。服务账号的本体是应用程序，其新建、修改和删除等操作在[应用注册](/docs/app-development/zh_CN/latest/managing_apps.html)模块中进行，本文将描述如何给服务账号授权。
 
 ## 先决条件
 给服务账号授权前，你需要
 1. 拥有EnOS 控制台的用户，并拥有管理员权限
-2. 在  **应用注册** 中已注册应用，或根据购买过其他组织应用，如何注册或购买应用请见[管理应用](https://www.envisioniot.com/docs/app-development/zh_CN/latest/managing_apps.html)
+2. 在  **应用注册** 中已注册应用，或根据购买过其他组织应用，如何注册或购买应用请见[管理应用](/docs/app-development/zh_CN/latest/managing_apps.html)
 
 ## 给服务账号授权
 服务账号是一种特殊的EnOS账号，其授权操作和用户、用户组授权操作相同：

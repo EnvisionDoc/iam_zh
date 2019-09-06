@@ -29,7 +29,7 @@ IAM为不同的身份类型提供了不同的身份验证方法。
 
  - _服务帐号_：通过EnOS验证的访问密钥（即数字签名）进行认证。服务账号通过注册或购买应用获得，更多信息，参考[管理应用](/docs/app-development/zh_CN/latest/managing_apps.html)。
 
- - _设备标识_：设备和edge使用X.509认证与EnOS云端建立安全的数据通信隧道。更多信息，参考[使用X.509证书最佳实践](https://www.envisioniot.com/docs/enos/zh_CN/latest/security/x509_ca/secure_communication_iothub.html)。
+ - _设备标识_：设备和edge使用X.509认证与EnOS云端建立安全的数据通信隧道。更多信息，参考[使用X.509证书最佳实践](/docs/enos/zh_CN/latest/security/x509_ca/secure_communication_iothub.html)。
 
 ## 授权<authorization>
 
